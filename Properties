@@ -1,0 +1,67 @@
+package com.huawei.gdp.domain;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Component;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Component
+@Getter
+@Setter
+@PropertySource(value = "classpath:sysparameters.properties")
+public class Properties {
+
+    /**
+     * 从配置文件启动加载下载excel表头。
+     */
+    @Value("${statis.column.dau}")
+    private String[] daucolnames;
+  
+
+    /**
+     * 从配置文件启动加载下载excel表头。
+     */  
+    @Value("${statis.column.wau}")
+    private String[] waucolnames;
+
+
+    /**
+     * 从配置文件启动加载下载excel表头。
+     */  
+    @Value("${statis.column.sevday}")
+    private String[] sevdaycolnames;
+
+
+    /**
+     * 从配置文件启动加载下载excel表头。
+     */  
+    @Value("${statis.column.convertday}")
+    private String[] convertdaycolnames;
+
+  
+    @Value("${statis.column.convertweek}")
+    private String[] convertweekcolnames;
+
+
+    /**
+     * 从配置文件启动加载下载excel表头。
+     */  
+    @Value("${statis.column.lost}")
+    private String[] lostcolnames;
+
+    /**
+     * 从配置文件启动加载下载excel表头。
+     */
+    @Value("${err.dateerr}")
+    private String dateerr;
+    
+    
+
+  
+  
+  
+  
+
+}
